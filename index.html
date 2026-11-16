@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা</title>
+  <meta name="description" content="দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা, ডেমরা, ঢাকা। ইবতেদায়ী থেকে কামিল (মাস্টার্স) পর্যন্ত। ভর্তি, ফলাফল, বিজ্ঞপ্তি ও ফরম ডাউনলোড।">
+  <meta name="theme-color" content="#0F3F55">
+
+  <!-- Icons from the original website -->
+  <link rel="icon" href="https://dskm.ac.bd/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dskm.ac.bd/assets/images/apple-icon-180x180.png">
+
+  <!-- Fonts: Noto Serif Bengali (headings), Hind Siliguri (body text), Amiri (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our own CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applies the saved light/dark theme before the page is drawn -->
+  <script src="js/theme-init.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">মূল অংশে যান</a>
+
+  <!-- =====================================================
+       TOP BAR: codes, date and time, login, online apply
+       ===================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+
+      <ul class="id-chips">
+        <li>মাদরাসা কোড: ১১০০৪</li>
+        <li>EIIN: ১০৭৯০৬</li>
+      </ul>
+
+      <div class="top-clock">
+        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> <span id="todayDate">—</span></span>
+        <span class="top-hijri"><i class="fa-solid fa-star-and-crescent" aria-hidden="true"></i> <span id="hijriDate">—</span></span>
+        <span><i class="fa-regular fa-clock" aria-hidden="true"></i> <span id="clockTime">—</span></span>
+      </div>
+
+      <div class="top-actions">
+        <!--<div class="font-tools" role="group" aria-label="লেখার আকার" style="display:none">
+         <button class="icon-btn font-btn" id="fontDown" type="button" aria-label="লেখা ছোট করুন">অ-</button>
+          <button class="icon-btn font-btn" id="fontUp" type="button" aria-label="লেখা বড় করুন">অ+</button>
+        </div>-->
+
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="ডার্ক মোড চালু করুন">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <div class="has-dropdown">
+          <button class="top-btn dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+            <span>লগইন</span>
+            <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu align-right">
+            <li><a href="https://dskm.ac.bd/login-student" target="_blank" rel="noopener">শিক্ষার্থী / অভিভাবক</a></li>
+            <li><a href="https://dskm.ac.bd/login-teacher" target="_blank" rel="noopener">শিক্ষক</a></li>
+            <li><a href="https://dskm.ac.bd/signin" target="_blank" rel="noopener">সফটওয়্যার লগইন</a></li>
+            <li><a href="https://dskm.ac.bd/login" target="_blank" rel="noopener">ওয়েবসাইট অ্যাডমিন</a></li>
+          </ul>
+        </div>
+
+        <div class="has-dropdown">
+          <button class="top-btn top-btn-gold dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+            <span>অনলাইন আবেদন</span>
+            <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu align-right">
+            <li><a href="https://digiedubd.info/3/Home/waiver_apply_form" target="_blank" rel="noopener">ফি মওকুফের আবেদন</a></li>
+            <li><a href="https://dskm.ac.bd/admission-form" target="_blank" rel="noopener">ভর্তি পরীক্ষার প্রবেশপত্র</a></li>
+            <li><a href="https://dskm.ac.bd/condition" target="_blank" rel="noopener">ভর্তি ফরম</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       BRAND BANNER (drawn with HTML and CSS, no banner image)
+       Logo | Bengali, Arabic and English name | campus photo.
+       On phones it becomes a small bar with the menu button.
+       ===================================================== -->
+  <header class="brand-bar">
+    <div class="container brand-inner">
+
+      <a class="brand" href="#top" aria-label="দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা, হোম পেজ">
+        <span class="brand-emblem">
+          <img class="brand-logo" src="https://dskm.ac.bd/assets/images/apple-icon-180x180.png" alt="" width="116" height="116">
+          <i class="brand-fallback fa-solid fa-star-and-crescent" aria-hidden="true"></i>
+        </span>
+
+        <span class="brand-text">
+          <strong class="brand-bn">দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা</strong>
+          <span class="brand-ar" lang="ar" dir="rtl">مدرسة دار النجاة الصديقية للكامل</span>
+          <span class="brand-en">DARUNNAZAT SIDDIKIA KAMIL MADRASAH</span>
+        </span>
+      </a>
+
+      <div class="brand-photo" aria-hidden="true">
+        <img src="https://dskm.ac.bd/backend_assets/slider_image/CampusNew.jpg" alt="" loading="lazy">
+      </div>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="mainNav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       MAIN NAVIGATION
+       On big screens it is a bar. On phones it slides in.
+       ===================================================== -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav class="nav-bar" id="mainNav" aria-label="প্রধান মেনু">
+    <div class="nav-drawer-head">
+      <strong>মেনু</strong>
+      <button class="icon-btn" id="menuClose" type="button" aria-label="মেনু বন্ধ করুন">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="container nav-container">
+      <ul class="nav-list">
+
+        <li><a class="is-current" href="#top" aria-current="page">হোম</a></li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            পরিচিতি <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/about-us">এক নজরে মাদরাসা</a></li>
+            <li><a href="https://dskm.ac.bd/principal-statement">অধ্যক্ষের বাণী ও সংক্ষিপ্ত জীবনবৃত্তান্ত</a></li>
+            <li><a href="https://dskm.ac.bd/key-feature">বৈশিষ্ট্য</a></li>
+            <li><a href="https://dskm.ac.bd/establishment-planning">প্রতিষ্ঠার পরিকল্পনা</a></li>
+            <li><a href="https://dskm.ac.bd/mission-vision">প্রতিষ্ঠার লক্ষ্য</a></li>
+            <li><a href="https://dskm.ac.bd/governing-body">গভর্নিং বডি</a></li>
+            <li><a href="https://dskm.ac.bd/complex">কমপ্লেক্স</a></li>
+            <li><a href="https://dskm.ac.bd/teachers">শিক্ষকমন্ডলীর তথ্যাবলী</a></li>
+            <li><a href="https://dskm.ac.bd/officers-employees">কর্মকর্তা ও কর্মচারী</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            একাডেমিক <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/listof-class-teachers">শ্রেণী শিক্ষকের তালিকা</a></li>
+            <li><a href="https://dskm.ac.bd/education-levels">শিক্ষা স্তর</a></li>
+            <li><a href="https://dskm.ac.bd/curriculum">পাঠ্যক্রম</a></li>
+            <li><a href="https://dskm.ac.bd/co-curriculum">সহ-পাঠ্যক্রম</a></li>
+            <li><a href="https://dskm.ac.bd/functions">অনুষ্ঠানমালা</a></li>
+            <li><a href="https://dskm.ac.bd/results">ফলাফল</a></li>
+            <li><a href="https://dskm.ac.bd/exam-method">পরীক্ষা পদ্ধতি</a></li>
+            <li><a href="https://dskm.ac.bd/holiday-list">ছুটির তালিকা</a></li>
+            <li><a href="https://dskm.ac.bd/exam-routine">পরীক্ষার রুটিন</a></li>
+            <li><a href="https://dskm.ac.bd/class-routine">ক্লাস রুটিন</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            ভর্তি <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/addmission-time">ভর্তির সময়</a></li>
+            <li><a href="https://dskm.ac.bd/addmission-test">ভর্তি পরীক্ষা</a></li>
+            <li><a href="https://dskm.ac.bd/admission-procedure">ভর্তি প্রক্রিয়া</a></li>
+            <li><a href="https://dskm.ac.bd/jamat-wise-fee-list">জামাআত ওয়ারী বিভিন্ন ফি</a></li>
+            <li><a href="https://dskm.ac.bd/terms-of-admission">ভর্তির শর্তাবলী</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            আবাসন <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/hostel-introduction">ছাত্রাবাস পরিচিতি</a></li>
+            <li><a href="https://dskm.ac.bd/residential-halls-directors">আবাসিক হল ও পরিচালকবৃন্দ</a></li>
+            <li><a href="https://dskm.ac.bd/housing-regulations">আবাসন প্রাপ্তির নিয়মাবলী</a></li>
+            <li><a href="https://dskm.ac.bd/housing-charges">আবাসন চার্জ</a></li>
+            <li><a href="https://dskm.ac.bd/residential-policies">আবাসিক নীতিমালা</a></li>
+            <li><a href="https://dskm.ac.bd/daily-residential-schedules">দৈনিক আবাসিক কার্যসূচি</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            প্রকাশনা <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/monthly-new-bikash">মাসিক নতুন বিকাশ</a></li>
+            <li><a href="https://dskm.ac.bd/event-schedule">ইভেন্ট সিডিউল</a></li>
+            <li><a href="https://dskm.ac.bd/study-tour">শিক্ষাসফর স্মারক</a></li>
+            <li><a href="https://dskm.ac.bd/yearly-activity">বার্ষিক কার্যক্রম</a></li>
+            <li><a href="https://dskm.ac.bd/academic-calendar">একাডেমিক ক্যালেন্ডার</a></li>
+            <li><a href="#">ত্রৈমাসিক সাওতুন নাজাত</a></li>
+            <li><a href="#">দেয়ালিকা</a></li>
+            <li><a href="#">অন্যান্য</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            লাইব্রেরি <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="https://dskm.ac.bd/library">মাকতাবা পরিচিতি</a></li>
+            <li><a href="#">ক্যাটালগ</a></li>
+            <li><a href="#">নীতিমালা</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            শাখা প্রতিষ্ঠান <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu align-right">
+            <li><a href="https://dntakhsisimadrasah.com/" target="_blank" rel="noopener">তাখসীসি শাখা</a></li>
+            <li><a href="https://dskm.ac.bd/women-teacher">মহিলা শাখা</a></li>
+            <li><a href="#">নেছারিয়া হেফজখানা</a></li>
+            <li><a href="#">ছালেহিয়া এতিমখানা</a></li>
+            <li><a href="https://dmkb.org/" target="_blank" rel="noopener">কিতাব বিভাগ</a></li>
+            <li><a href="https://www.dhqabd.com/" target="_blank" rel="noopener">হিফজুল কুরআন একাডেমি</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            মিডিয়া <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu align-right">
+            <li><a href="https://dskm.ac.bd/photo-gallery">ফটোগ্যালারী</a></li>
+            <li><a href="https://dskm.ac.bd/video-gallery">ভিডিও গ্যালারি</a></li>
+          </ul>
+        </li>
+
+        <li><a href="https://dskm.ac.bd/contact-us">যোগাযোগ</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- =====================================================
+       NOTICE STRIP: one latest notice, change with the arrows
+       ===================================================== -->
+  <div class="notice-strip">
+    <div class="container notice-strip-inner">
+      <span class="strip-label"><i class="fa-regular fa-bell" aria-hidden="true"></i> নোটিশ</span>
+
+      <a class="strip-link" id="stripLink" href="#notices">লোড হচ্ছে…</a>
+
+      <div class="strip-controls">
+        <span class="strip-count" id="stripCount" aria-hidden="true"></span>
+        <button class="strip-btn" id="stripPrev" type="button" aria-label="আগের নোটিশ">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="strip-btn" id="stripNext" type="button" aria-label="পরের নোটিশ">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <a class="strip-all" href="#notices">সব দেখুন</a>
+      </div>
+    </div>
+  </div>
+
+
+  <main id="main">
+
+    <!-- =====================================================
+         HERO: name, short intro, and the campus photo slider
+         ===================================================== -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <h1>দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা</h1>
+          <p class="hero-lead">
+            ঢাকা দক্ষিণ সিটি কর্পোরেশনের ৬৭ নং ওয়ার্ডে, ছায়া ঢাকা পাখি ডাকা পরিবেশে অবস্থিত ঐতিহ্যবাহী ইসলামী শিক্ষা প্রতিষ্ঠান। ১৯৯০ সাল থেকে ইবতেদায়ী স্তর দিয়ে শুরু হয়ে আজ এখানে কামিল (মাস্টার্স) পর্যন্ত পড়ানো হয়।
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://dskm.ac.bd/admission-procedure">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> ভর্তি প্রক্রিয়া
+            </a>
+            <a class="btn btn-ghost" href="#notices">
+              <i class="fa-regular fa-bell" aria-hidden="true"></i> সর্বশেষ বিজ্ঞপ্তি
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="slider" id="heroSlider" tabindex="0" role="region" aria-roledescription="ছবির স্লাইডার" aria-label="ক্যাম্পাসের ছবি">
+
+            <div class="slides">
+              <figure class="slide is-active">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/Campus2.jpg" alt="মাদরাসা ক্যাম্পাস">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/CampusNew.jpg" alt="মাদরাসা ক্যাম্পাসের নতুন ভবন" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/Main_Gate1.jpg" alt="মাদরাসার প্রধান ফটক" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/banner11.jpg" alt="মাদরাসার ব্যানার ১" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/banner2.jpg" alt="মাদরাসার ব্যানার ২" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/banner4.jpg" alt="মাদরাসার ব্যানার ৩" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/60141007_1723770347769110_3755069943884808192_o4.jpg" alt="মাদরাসার অনুষ্ঠানের ছবি" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="https://dskm.ac.bd/backend_assets/slider_image/Untitled-1.jpg" alt="মাদরাসার ছবি" loading="lazy">
+              </figure>
+            </div>
+
+            <button class="slider-btn slider-prev" id="sliderPrev" type="button" aria-label="আগের ছবি">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="slider-btn slider-next" id="sliderNext" type="button" aria-label="পরের ছবি">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="slider-footer">
+              <button class="slider-play" id="sliderPlay" type="button" aria-label="স্লাইড থামান">
+                <i class="fa-solid fa-pause" aria-hidden="true"></i>
+              </button>
+              <div class="dots" id="sliderDots"></div>
+              <span class="slider-count" id="sliderCount"></span>
+            </div>
+          </div>
+          <p class="slider-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> ছবিতে ক্লিক করলে বড় করে দেখা যাবে</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         QUICK LINKS
+         ===================================================== -->
+    <section class="quick-links" aria-label="দ্রুত লিংক">
+      <div class="container">
+        <ul class="quick-grid">
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/admission-procedure">
+              <span class="quick-icon"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i></span>
+              <span class="quick-label">ভর্তি প্রক্রিয়া</span>
+            </a>
+          </li>
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/results">
+              <span class="quick-icon"><i class="fa-solid fa-square-poll-vertical" aria-hidden="true"></i></span>
+              <span class="quick-label">ফলাফল</span>
+            </a>
+          </li>
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/class-routine">
+              <span class="quick-icon"><i class="fa-solid fa-calendar-week" aria-hidden="true"></i></span>
+              <span class="quick-label">ক্লাস রুটিন</span>
+            </a>
+          </li>
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/exam-routine">
+              <span class="quick-icon"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></span>
+              <span class="quick-label">পরীক্ষার রুটিন</span>
+            </a>
+          </li>
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/holiday-list">
+              <span class="quick-icon"><i class="fa-solid fa-calendar-xmark" aria-hidden="true"></i></span>
+              <span class="quick-label">ছুটির তালিকা</span>
+            </a>
+          </li>
+          <li>
+            <a class="quick-card" href="https://dskm.ac.bd/photo-gallery">
+              <span class="quick-icon"><i class="fa-solid fa-images" aria-hidden="true"></i></span>
+              <span class="quick-label">ফটোগ্যালারী</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         NOTICE CENTER + SIDEBAR (principal, calendar)
+         ===================================================== -->
+    <section class="section" id="notices">
+      <div class="container layout">
+
+        <!-- Left side: notices -->
+        <div class="layout-main reveal">
+          <div class="section-head">
+            <h2>বিজ্ঞপ্তি কেন্দ্র</h2>
+
+            <div class="segmented" role="group" aria-label="বিজ্ঞপ্তি দেখার ধরন">
+              <button class="segment is-active" type="button" data-view="level" aria-pressed="true">স্তর অনুযায়ী</button>
+              <button class="segment" type="button" data-view="all" aria-pressed="false">সব বিজ্ঞপ্তি</button>
+            </div>
+          </div>
+
+          <!-- View 1: notices by level -->
+          <div id="levelView">
+            <div class="tabs" id="levelTabs" role="tablist" aria-label="শিক্ষা স্তর">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-level="dakhil">দাখিল</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-level="alim">আলিম</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-level="fazil">ফাযিল</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-level="kamil">কামিল</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-level="fazilhonours">ফাজিল অনার্স</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-level="kamilmasters">কামিল মাস্টার্স</button>
+            </div>
+
+            <div class="notice-scroll" id="levelScroll">
+              <ul class="notice-list" id="levelList"></ul>
+            </div>
+
+            <div class="empty-state" id="levelEmpty" hidden>
+              <i class="fa-solid fa-inbox" aria-hidden="true"></i>
+              <p>এই স্তরে এখন কোনো নোটিশ নেই।</p>
+              <button class="btn btn-outline" id="goToAll" type="button">সব বিজ্ঞপ্তি দেখুন</button>
+            </div>
+          </div>
+
+          <!-- View 2: all notices with search and filter -->
+          <div id="allView" hidden>
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <input id="noticeSearch" type="search" placeholder="বিজ্ঞপ্তি খুঁজুন, যেমন: ফলাফল (শর্টকাট: / চাপুন)" autocomplete="off" aria-label="বিজ্ঞপ্তি খুঁজুন">
+              <button class="search-clear" id="searchClear" type="button" aria-label="খোঁজা মুছুন" hidden>
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="chips" id="categoryChips" role="group" aria-label="বিজ্ঞপ্তির ধরন"></div>
+
+            <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+            <div class="notice-scroll" id="allScroll">
+              <ul class="notice-list" id="allList"></ul>
+            </div>
+
+            <div class="empty-state" id="allEmpty" hidden>
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <p>কোনো বিজ্ঞপ্তি পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজে দেখুন।</p>
+              <button class="btn btn-outline" id="resetFilters" type="button">খোঁজা মুছে ফেলুন</button>
+            </div>
+
+            <div class="load-more-wrap">
+              <button class="btn btn-outline" id="loadMore" type="button">আরও দেখুন</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Right side: principal + calendar -->
+        <aside class="layout-side">
+
+          <article class="card principal reveal">
+            <div class="principal-photo">
+              <img src="https://dskm.ac.bd/assets/teacher_images/1698126427.jpg" alt="অধ্যক্ষের ছবি" loading="lazy">
+            </div>
+            <div class="principal-info">
+              <h3>অধ্যক্ষ</h3>
+              <p class="principal-name">আবুল খায়ের মুহাম্মদ আবু বকর সিদ্দীক</p>
+              <p class="principal-degree">বি.এ. (অনার্স), এম.এ. (ঢাকা বিশ্ববিদ্যালয়); এম.এম. (১ম শ্রেণি)</p>
+              <a class="text-link" href="https://dskm.ac.bd/principal-statement">
+                বাণী ও জীবনবৃত্তান্ত <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <section class="card calendar reveal" aria-label="একাডেমিক ক্যালেন্ডার">
+            <div class="cal-head">
+              <button class="cal-nav" id="calPrev" type="button" aria-label="আগের মাস">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <h3 id="calTitle">—</h3>
+              <button class="cal-nav" id="calNext" type="button" aria-label="পরের মাস">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="cal-weekdays" aria-hidden="true">
+              <span>রবি</span><span>সোম</span><span>মঙ্গল</span><span>বুধ</span><span>বৃহ</span><span>শুক্র</span><span>শনি</span>
+            </div>
+
+            <div class="cal-grid" id="calGrid"></div>
+
+            <div class="cal-detail" id="calDetail" aria-live="polite"></div>
+
+            <div class="cal-foot">
+              <span class="cal-legend"><i class="cal-dot" aria-hidden="true"></i> বিজ্ঞপ্তি আছে</span>
+              <span class="cal-legend"><i class="cal-dot cal-dot-holiday" aria-hidden="true"></i> ছুটি (শুক্র-শনি)</span>
+              <button class="text-btn" id="calToday" type="button">আজকের দিনে যান</button>
+            </div>
+          </section>
+
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         STATS BAND: numbers count up when you scroll here
+         ===================================================== -->
+    <section class="stats-band" aria-label="এক নজরে">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-number" id="statYears" data-target="0">০</span>
+          <span class="stat-label">বছরের পথচলা</span>
+          <small>১৯৯০ সালে একাডেমিক কার্যক্রম শুরু</small>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="7">০</span>
+          <span class="stat-label">শিক্ষা স্তর</span>
+          <small>ইবতেদায়ী থেকে কামিল (মাস্টার্স)</small>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="3">০</span>
+          <span class="stat-label">কামিল বিভাগ</span>
+          <small>হাদিস, ফিকহ ও তাফসির</small>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="statNotices" data-target="0">০</span>
+          <span class="stat-label">প্রকাশিত বিজ্ঞপ্তি</span>
+          <small>ওয়েবসাইটের তালিকা অনুযায়ী</small>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT + TIMELINE
+         ===================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+
+        <div class="about-text reveal">
+          <h2>দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসায় আপনাকে স্বাগতম</h2>
+
+          <p class="about-lead">
+            ঢাকা দক্ষিণ সিটি কর্পোরেশনের ৬৭ নং ওয়ার্ডের শুকুরসি গোরস্থান সংলগ্ন ডেমরা-নারায়ণগঞ্জ রোডের পশ্চিম পাশে, ডি.এন্ড.ডি. প্রজেক্টের মধ্যে ছায়া ঢাকা পাখি ডাকা মনোরম পরিবেশে অবস্থিত দেশের অন্যতম শ্রেষ্ঠ ইসলামী শিক্ষা প্রতিষ্ঠান ঐতিহ্যবাহী দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা। স্থানীয় কয়েক গ্রামবাসীর যৌথ উদ্যোগে ভারত বিভাগের এক বছর পূর্বে ১৯৪৬ ঈসায়ী সালে প্রতিষ্ঠিত হয়েছিল শুকুরসি গোরস্থান।
+          </p>
+
+          <div class="expand" id="historyMore">
+            <div class="expand-inner">
+              <p>১৯৪৬ থেকে ৮৬; দীর্ঘ ৪০ বছর পর মহান রাব্বুল আলামীনের অশেষ রহমতে কবরবাসীর জন্যে দুআ মাহফিল করার উদ্দেশ্যে এ কবরস্থানটির পাশে তৎকালীন একটি ধানক্ষেতে শুভাগমন ঘটে ছারছীনা শরীফের পীরে কামেল শাহ সূফী আবু জাফর মুহাম্মাদ সালেহ র. এর। মাহফিলের পর কবরবাসীদের জন্যে দুআর ধারা অব্যাহত রাখার মহান লক্ষ্যে গোরস্থানের পাশে একটি মাদরাসা প্রতিষ্ঠার আকাঙ্ক্ষা ব্যক্ত করলেন তিনি। এর জন্যে দুআও করলেন মহান আল্লাহর আলীশান দরবারে।</p>
+
+              <p>প্রায় জনমানব শূন্য এ এলাকাটিতে তখন বিরাজ করছিল এক ভীতিকর পরিবেশ। বৃষ্টির দিনে পানিতে প্রায় ডুবে যেত সবকিছু। চারদিকে ছিল বিশাল-বিস্তীর্ণ ধানক্ষেত। দিনের বেলায়ই চোখে পড়তো নানা ধরনের হিংস্র প্রাণী। সন্ধ্যায় ভেসে আসতো দলবদ্ধ শৃগালের হুক্কাহুয়া ডাক। চোর-ডাকাত আর দুর্বৃত্তদের অনেকটা অভয়াশ্রম ছিল এ এলাকা। রাতে তো দূরের কথা, মানুষজন সন্ধ্যা বেলায়ও এ এলাকায় চলাচল করতে ভয় পেতো। মেইন রোডের গলাকাটা পুল (বর্তমানে মাদরাসা ব্রিজ) এখনো সে বীভৎস পরিবেশের নীরব সাক্ষী।</p>
+
+              <p>১৯৮৮ সনে পার্শ্ববর্তী করিম জুট মিলস লিমিটেড জামে মাসজিদের পেশ ইমাম আলহাজ্জ মাওলানা রুহুল আমীন সাহেবের সাথে এ এলাকার ১৮ জন পূণ্যবান ব্যক্তি পবিত্র হজ্জব্রত পালনের উদ্দেশ্যে গমন করেন পবিত্র মক্কাতুল মুকাররমায়। হজ্জ শেষে বাইতুল্লাহর চত্বরে বসে তারা সম্মিলিতভাবে পরামর্শ করে সিদ্ধান্ত নেন, দেশে ফিরে একটি মাদরাসা স্থাপন করবেন। পরবর্তীতে স্থানীয় সান্দিরা বালুঘাটে কবরস্থান সংশ্লিষ্ট এলাকার বিশিষ্ট ব্যক্তিদের নিয়ে সিদ্ধান্ত হয় শুকুরসী গোরস্থানের পাশে ‘দারুল ফেরদাউস’ নামে একটি ইবতেদায়ী মাদরাসা প্রতিষ্ঠার। সিদ্ধান্ত অনুসারে ১৯৮৯ সনে সেপ্টেম্বর মাসের কোন এক তারিখে এখানে একটি মাহফিলে ফুরফুরা শরীফের পীর আলহাজ্জ হযরত মাওলানা আব্দুল কাহহার সিদ্দীকী আল কুরাইশী র. এর মুবারক হাতে মরহুম হাজী আনসার আলী সাহেবের দান করা জমিতে অর্থাৎ, বর্তমান মাদরাসা মাঠের ঠিক মাঝামাঝি জায়গায় জলাবদ্ধ ধানক্ষেতের পানির মধ্যে একটি খুঁটি পুতে ভিত্তি স্থাপন করা হয় এ মাদরাসার। ফুরফুরার হুজুর র. ‘দারুল ফেরদাউস’ নামের পরিবর্তে এর নাম রাখেন ‘দারুননাজাত’। হুজুর বলেন, “আগেতো নাজাত অর্জন করেন, পরে জান্নাতে যান।”</p>
+
+              <p>১৯৯০ সনের জানুয়ারি মাসে পার্শ্ববর্তী হুসাইনিয়া জামে মাসজিদে পরিচালিত মক্তবটি এখানে এনে মাসজিদের ইমাম আলহাজ্জ মৌলভী নূরুল হক সাহেব কর্তৃক প্রথম শুরু হয় মাদরাসার একাডেমিক কার্যক্রম। ১৯৯০-১৯৯১ দুই বছর চলে ইবতেদায়ী স্তর। এর মধ্যে তিনজন ইবতেদায়ী প্রধান পরিবর্তন হন।</p>
+
+              <p>আল্লাহ তাআলার এক ইশারায় এবং তাঁর অশেষ মেহেরবানীতে ১৯৯১ সনের ১৬ ডিসেম্বর তারিখে ইবতেদায়ী প্রধান হিসেবে ৭০০ টাকা বেতনে দারুননাজাতের খেদমতে শরীক হন দারুননাজাতের বর্তমান সুযোগ্য অধ্যক্ষ মহোদয় আলহাজ্জ মাও. আ.খ.ম. আবুবকরসিদ্দীক মা.জি.আ.। আল্লাহর রহমতের ওপর ভরসা করে তিনি ১৯৯২ সনে দশম শ্রেণিতে একজন, নবম শ্রেণিতে একজন, অষ্টম শ্রেণিতে তিনজন, সপ্তম শ্রেণিতে ছয়জন ছাত্র নিয়ে শুরু করেন এর দাখিল স্তরের কার্যক্রম। আল্লাহর অশেষ রহমত, সর্বসাধারণের আস্থা ও সহযোগিতায় মাদরাসাটি ১৯৯৪ সনে আলিম, ১৯৯৬ সনে ফাযিল এবং ২০০৪ সনে কামিল পর্যায়ে উন্নীত হয়। লাভ হয় মাদরাসা বোর্ডের একাডেমিক অনুমতি ও মঞ্জুরী এবং ফাযিল পর্যায়ের শিক্ষক-কর্মচারিদের বেতন-ভাতাদির সরকারি অংশ। ২০১০ সালে এখানে আল কুরআন এন্ড ইসলামিক স্টাডিজ এবং আল হাদিস এন্ড ইসলামিক স্টাডিজ- এ দুটো বিষয়ে অনার্স কোর্স চালু করা হয়। ২০০৪ সালে কামিল (স্নাতকোত্তর) হাদিস, ২০১৬ সালে ফিকহ এবং সর্বশেষ ২০১৮ সালে তাফসির বিভাগ চালু করা হয়। আর কামিল (স্নাতকোত্তর) মাস্টার্স চালু হয় ২০১৭ সালে। এ যেন অবিশ্বাস্য স্বপ্নের এক সফল বাস্তবায়ন।</p>
+            </div>
+          </div>
+
+          <button class="btn btn-outline" id="historyToggle" type="button" aria-expanded="false" aria-controls="historyMore">
+            <span id="historyToggleText">পুরো ইতিহাস পড়ুন</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="about-timeline reveal">
+          <h3>ধাপে ধাপে এগিয়ে চলা</h3>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FORMS + ONLINE APPLY
+         ===================================================== -->
+    <section class="section" id="forms">
+      <div class="container forms-grid">
+
+        <div class="card reveal">
+          <h2>ফরম ডাউনলোড</h2>
+
+          <div class="search-box compact">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="formSearch" type="search" placeholder="ফরম খুঁজুন, যেমন: আলিম" autocomplete="off" aria-label="ফরম খুঁজুন">
+          </div>
+
+          <ul class="file-list">
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1762667379.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি নির্দেশিকা-২০২৬</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1765343468.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম আতফাল থেকে তাসে</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1789659690.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম আলিম</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1793513123.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম ফাজিল (পাস)</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1715572879.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম ফাজিল (অনার্স)</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1701236476.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম কামিল</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1701236489.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>ভর্তি ফরম কামিল (মাস্টার্স)</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+            <li><a href="https://dskm.ac.bd/assets/fileupload/1615947781.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>বৃত্তির তথ্য ফরম</span><i class="fa-solid fa-download end" aria-hidden="true"></i></a></li>
+          </ul>
+          <p class="muted" id="formEmpty" hidden>এই নামে কোনো ফরম পাওয়া যায়নি।</p>
+          <a class="text-link" href="https://dskm.ac.bd/view-allform">
+            সমস্ত ফরম দেখুন <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="card apply-card reveal">
+          <h2>অনলাইন আবেদন</h2>
+          <p class="muted">ঘরে বসেই আবেদন করুন বা প্রবেশপত্র সংগ্রহ করুন।</p>
+
+          <a class="apply-row" href="https://dskm.ac.bd/condition" target="_blank" rel="noopener">
+            <span class="apply-icon"><i class="fa-solid fa-file-signature" aria-hidden="true"></i></span>
+            <span class="apply-text"><strong>ভর্তি ফরম</strong><small>অনলাইনে ভর্তির আবেদন</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square end" aria-hidden="true"></i>
+          </a>
+          <a class="apply-row" href="https://dskm.ac.bd/admission-form" target="_blank" rel="noopener">
+            <span class="apply-icon"><i class="fa-solid fa-id-card" aria-hidden="true"></i></span>
+            <span class="apply-text"><strong>ভর্তি পরীক্ষার প্রবেশপত্র</strong><small>প্রবেশপত্র সংগ্রহ করুন</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square end" aria-hidden="true"></i>
+          </a>
+          <a class="apply-row" href="https://digiedubd.info/3/Home/waiver_apply_form" target="_blank" rel="noopener">
+            <span class="apply-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+            <span class="apply-text"><strong>ফি মওকুফের আবেদন</strong><small>ফি মওকুফের জন্য আবেদন করুন</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square end" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         IMPORTANT LINKS
+         ===================================================== -->
+    <section class="section section-alt" id="links">
+      <div class="container">
+        <h2 class="center-title reveal">গুরুত্বপূর্ণ লিংকসমূহ</h2>
+
+        <ul class="links-grid reveal">
+          <li><a class="link-card" href="http://www.bmeb.gov.bd/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i><span>বাংলাদেশ মাদরাসা শিক্ষা বোর্ড</span></a></li>
+          <li><a class="link-card" href="http://www.dme.gov.bd/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-landmark" aria-hidden="true"></i><span>বাংলাদেশ মাদরাসা শিক্ষা অধিদপ্তর</span></a></li>
+          <li><a class="link-card" href="https://iau.edu.bd/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i><span>ইসলামি আরবী বিশ্ববিদ্যালয়</span></a></li>
+          <li><a class="link-card" href="https://moedu.gov.bd/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-school" aria-hidden="true"></i><span>শিক্ষা মন্ত্রণালয়</span></a></li>
+          <li><a class="link-card" href="https://www.teachers.gov.bd/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i><span>শিক্ষক বাতায়ন</span></a></li>
+          <li><a class="link-card" href="https://dpsabd.com/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i><span>দারুননাজাত প্রাক্তন ছাত্র এসোসিয়েশন</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <h3>দারুননাজাত সিদ্দীকিয়া কামিল মাদরাসা</h3>
+        <p class="footer-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>পূর্ব বক্সনগর, সারুলিয়া, ডেমরা, ঢাকা - ১৩৬১।</span>
+        </p>
+        <a class="footer-map" href="https://www.google.com/maps/search/?api=1&amp;query=Darunnajat+Siddikia+Kamil+Madrasah+Demra+Dhaka" target="_blank" rel="noopener">
+          <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> ম্যাপে দেখুন
+        </a>
+        <p class="footer-codes">মাদরাসা কোড: ১১০০৪ &nbsp;|&nbsp; EIIN: ১০৭৯০৬</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>যোগাযোগ</h3>
+        <ul class="contact-list">
+          <li><span>অধ্যক্ষ</span><a href="tel:01309107906">০১৩০৯১০৭৯০৬</a></li>
+          <li><span>উপাধ্যক্ষ</span><a href="tel:01816101400">০১৮১৬১০১৪০০</a></li>
+          <li><span>উপাধ্যক্ষ-২</span><a href="tel:01712557620">০১৭১২৫৫৭৬২০</a></li>
+          <li><span>অফিস (ল্যান্ডফোন)</span><a href="tel:7500171">৭৫০০১৭১</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>আরও নম্বর</h3>
+        <ul class="contact-list">
+          <li><span>মুহাদ্দীস</span><a href="tel:01914387913">০১৯১৪৩৮৭৯১৩</a></li>
+          <li><span>হল সুপার</span><a href="tel:01712518187">০১৭১২৫১৮১৮৭</a></li>
+          <li><span>অফিস</span><a href="tel:01916604225">০১৯১৬৬০৪২২৫</a></li>
+          <li><span>বোডিং অফিস</span><a href="tel:01925745396">০১৯২৫৭৪৫৩৯৬</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>অনলাইনে</h3>
+        <div class="copy-row">
+          <a href="mailto:darunnazat90@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>darunnazat90@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="darunnazat90@gmail.com" aria-label="ইমেইল ঠিকানা কপি করুন">
+            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+          </button>
+        </div>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com/darunnazat1990" target="_blank" rel="noopener" aria-label="ফেসবুক পেজ"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="https://dskm.ac.bd/" target="_blank" rel="noopener" aria-label="ওয়েবসাইট"><i class="fa-solid fa-globe" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>Copyright © 2015, Darunnazat Siddikia Kamil Madrasah. All Rights Reserved.</p>
+        <!--<p>Technical Support: <a href="http://" target="_blank" rel="noopener"></a></p>-->
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =====================================================
+       FLOATING PIECES: back to top, big photo viewer, toasts
+       ===================================================== -->
+  <button class="back-top" id="backTop" type="button" aria-label="উপরে যান">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="বড় ছবি" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="বন্ধ করুন">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="আগের ছবি">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCount"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="পরের ছবি">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+
+  <!-- Our own JavaScript: data first, then the main script -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
