@@ -1,2 +1,2 @@
 # DSKM
-This is a clone project. Only for learning purpose.
+This is a remake project. Only for learning purpose.
